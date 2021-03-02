@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment"
+    >
+
+
+<RelativeLayout
+    android:layout_width="500dp"
+    android:layout_height="500dp"
+    android:layout_centerInParent="true">
+    <de.klimek.scanner.ScannerView
+        android:id="@+id/scanner"
+        android:layout_margin="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:reticle_fraction="1"
+
+        app:reticle_color="@android:color/holo_green_light"
+        app:allow_frontcamera="true"
+        app:use_flash="false"
+        app:decode_interval="500" />
+
+</RelativeLayout>
+
+<!--   <cn.bingoogolapple.qrcode.zxing.ZXingView-->
+<!--        android:id="@+id/zbarview"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:qrcv_animTime="1000"-->
+
+<!--        app:qrcv_barCodeTipText="将条码放入框内，即可自动扫描"-->
+<!--        app:qrcv_barcodeRectHeight="140dp"-->
+<!--        app:qrcv_borderColor="@android:color/white"-->
+<!--        app:qrcv_borderSize="1dp"-->
+<!--        app:qrcv_cornerColor="@android:color/darker_gray"-->
+<!--        app:qrcv_cornerLength="20dp"-->
+<!--        app:qrcv_cornerSize="3dp"-->
+<!--        app:qrcv_isBarcode="false"-->
+
+<!--        app:qrcv_isOnlyDecodeScanBoxArea="false"-->
+<!--        app:qrcv_isScanLineReverse="true"-->
+<!--        app:qrcv_isShowDefaultGridScanLineDrawable="false"-->
+<!--        app:qrcv_isShowDefaultScanLineDrawable="true"-->
+<!--        app:qrcv_isShowTipBackground="true"-->
+<!--        app:qrcv_isShowTipTextAsSingleLine="false"-->
+<!--        app:qrcv_isTipTextBelowRect="false"-->
+<!--        app:qrcv_maskColor="@android:color/darker_gray"-->
+<!--        app:qrcv_qrCodeTipText="将二维码/条码放入框内，即可自动扫描"-->
+<!--        app:qrcv_rectWidth="200dp"-->
+<!--        app:qrcv_scanLineColor="@android:color/darker_gray"-->
+<!--        app:qrcv_scanLineMargin="0dp"-->
+<!--        app:qrcv_scanLineSize="0.5dp"-->
+<!--        app:qrcv_tipTextColor="@android:color/white"-->
+<!--        app:qrcv_tipTextSize="12sp"-->
+<!--        app:qrcv_toolbarHeight="56dp"-->
+<!--        app:qrcv_topOffset="90dp" />-->
+
+    <TextView
+        android:id="@+id/textview_first"
+        android:layout_width="wrap_content"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_first_fragment"
+        android:layout_centerHorizontal="true"
+         />
+
+    <Button
+        android:id="@+id/button_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/textview_first"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/name"
+           android:background="@drawable/edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:hint="名称"
+            android:textSize="20sp"
+             />
+        <EditText
+            android:id="@+id/price"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:hint="价格"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>
